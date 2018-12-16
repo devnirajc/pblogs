@@ -1,0 +1,79 @@
+2018-12-15 16:35:16,372 INFO: Microblog startup [in D:\brainstrom\microblog\app\__init__.py:43]
+2018-12-15 20:46:14,545 INFO: Microblog startup [in D:\brainstrom\microblog\app\__init__.py:43]
+2018-12-15 20:46:25,766 INFO: Microblog startup [in D:\brainstrom\microblog\app\__init__.py:43]
+2018-12-15 20:48:27,444 INFO: Microblog startup [in D:\brainstrom\microblog\app\__init__.py:43]
+2018-12-15 20:50:02,437 INFO: Microblog startup [in D:\brainstrom\microblog\app\__init__.py:43]
+2018-12-15 21:00:36,925 INFO: Microblog startup [in D:\brainstrom\microblog\app\__init__.py:43]
+2018-12-15 21:25:21,618 INFO: Microblog startup [in D:\brainstrom\microblog\app\__init__.py:45]
+2018-12-15 21:31:53,991 INFO: Microblog startup [in D:\brainstrom\microblog\app\__init__.py:45]
+2018-12-15 21:39:28,798 INFO: Microblog startup [in D:\brainstrom\microblog\app\__init__.py:45]
+2018-12-15 21:56:41,642 INFO: Microblog startup [in D:\brainstrom\microblog\app\__init__.py:47]
+2018-12-15 22:33:50,558 INFO: Microblog startup [in D:\brainstrom\microblog\app\__init__.py:49]
+2018-12-15 23:18:14,120 INFO: Microblog startup [in D:\brainstrom\microblog\app\__init__.py:52]
+2018-12-15 23:21:48,596 ERROR: Exception on /reset_password_request [POST] [in c:\users\nirajc\envs\microblog\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "c:\users\nirajc\envs\microblog\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\nirajc\envs\microblog\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\nirajc\envs\microblog\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\nirajc\envs\microblog\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\nirajc\envs\microblog\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\nirajc\envs\microblog\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\brainstrom\microblog\app\routes.py", line 106, in reset_password_request
+    send_password_reset_email(user)
+  File "D:\brainstrom\microblog\app\email.py", line 28, in send_password_reset_email
+    user=user, token=token))
+  File "c:\users\nirajc\envs\microblog\lib\site-packages\flask\templating.py", line 135, in render_template
+    context, ctx.app)
+  File "c:\users\nirajc\envs\microblog\lib\site-packages\flask\templating.py", line 117, in _render
+    rv = template.render(context)
+  File "c:\users\nirajc\envs\microblog\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "c:\users\nirajc\envs\microblog\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "c:\users\nirajc\envs\microblog\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\nirajc\envs\microblog\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "D:\brainstrom\microblog\app\templates\email\reset_password.html", line 2, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+  File "D:\brainstrom\microblog\app\templates\base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "c:\users\nirajc\envs\microblog\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "c:\users\nirajc\envs\microblog\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 4, in block "doc"
+    {%- block html %}
+  File "c:\users\nirajc\envs\microblog\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 20, in block "html"
+    {% block body -%}
+  File "c:\users\nirajc\envs\microblog\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 23, in block "body"
+    {% block content -%}
+  File "D:\brainstrom\microblog\app\templates\base.html", line 48, in block "content"
+    {% block app_content %}{% endblock %}
+  File "D:\brainstrom\microblog\app\templates\email\reset_password.html", line 8, in block "app_content"
+    {{ wtf.quick_form(form) }}
+  File "c:\users\nirajc\envs\microblog\lib\site-packages\jinja2\runtime.py", line 579, in _invoke
+    rv = self._func(*arguments)
+  File "c:\users\nirajc\envs\microblog\lib\site-packages\flask_bootstrap\templates\bootstrap\wtf.html", line 200, in template
+    {{ form.hidden_tag() }}
+  File "c:\users\nirajc\envs\microblog\lib\site-packages\jinja2\environment.py", line 430, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'form' is undefined
+2018-12-16 11:14:08,674 INFO: Microblog startup [in D:\brainstrom\microblog\app\__init__.py:52]
+2018-12-16 11:36:43,190 INFO: Microblog startup [in D:\brainstrom\microblog\app\__init__.py:52]
+2018-12-16 11:36:52,320 INFO: Microblog startup [in D:\brainstrom\microblog\app\__init__.py:52]
+2018-12-16 12:25:19,443 INFO: Microblog startup [in D:\brainstrom\microblog\app\__init__.py:52]
+2018-12-16 13:48:07,728 INFO: Microblog startup [in D:\brainstrom\microblog\app\__init__.py:52]
+2018-12-16 13:48:47,992 INFO: Microblog startup [in D:\brainstrom\microblog\app\__init__.py:52]
+2018-12-16 13:48:58,856 INFO: Microblog startup [in D:\brainstrom\microblog\app\__init__.py:52]
+2018-12-16 13:49:04,682 INFO: Microblog startup [in D:\brainstrom\microblog\app\__init__.py:52]
+2018-12-16 13:52:11,963 INFO: Microblog startup [in D:\brainstrom\microblog\app\__init__.py:52]
+2018-12-16 13:55:28,182 INFO: Microblog startup [in D:\brainstrom\microblog\app\__init__.py:52]
+2018-12-16 13:55:44,511 INFO: Microblog startup [in D:\brainstrom\microblog\app\__init__.py:52]
+2018-12-16 13:55:54,521 INFO: Microblog startup [in D:\brainstrom\microblog\app\__init__.py:52]
+2018-12-16 14:00:11,416 INFO: Microblog startup [in D:\brainstrom\microblog\app\__init__.py:52]
+2018-12-16 14:25:59,597 INFO: Microblog startup [in D:\brainstrom\microblog\app\__init__.py:74]
